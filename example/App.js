@@ -20,7 +20,7 @@ import {
   getBadgeCount,
   setBadgeCount,
   getNotificationBadgeSetting,
-} from 'react-native-notification-badge';
+} from '@bondulich/react-native-notification-badge';
 
 export default function App() {
   const [badgeCount, _setBadgeCount] = useState(undefined);
