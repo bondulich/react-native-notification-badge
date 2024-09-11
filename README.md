@@ -20,11 +20,12 @@ A very simple notification badge count manager for React Native that just works.
 **Note: All APIs throw if `Platform.OS !== 'ios'`!**. So wrap your calls with a `Platform.OS` check first.
 
 ```ts
-import {
-  getBadgeCount,
-  setBadgeCount,
-  getNotificationBadgeSetting,
-} from '@bondulich/react-native-notification-badge';
+import {setBadgeCount} from '@bondulich/react-native-notification-badge';
+import {Platform} from 'react-native';
+
+if (Platform.OS === 'ios') {
+  await setBadgeCount(0);
+}
 ```
 
 ### `getBadgeCount`
